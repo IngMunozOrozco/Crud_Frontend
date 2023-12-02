@@ -57,19 +57,20 @@ const addNewUser = (newUser) => {
       <h2>{selectedUser === null? "New user" : "User"}</h2>
       <div className="input-container">
         <label htmlFor="p-first_name">First Name</label>
+       
         <input
           type="text"
           id="p-first_name"
-          placeholder="Your name"
+          placeholder="Enter name"
           {...register("first_name", { required: true })}
         />
       </div>
       <div className="input-container">
-        <label htmlFor="p-last_name">Last Names</label>
+        <label htmlFor="p-last_name">Last Name</label>
         <input
           type="text"
           id="p-last_name"
-          placeholder="Your last names"
+          placeholder="Enter last name"
           {...register("last_name", { required: true })}
         />
       </div>
@@ -78,7 +79,7 @@ const addNewUser = (newUser) => {
         <input
           type="text"
           id="p-email"
-          placeholder="Your email"
+          placeholder="Enter email"
           {...register("email", { required: true })}
         />
       </div>
@@ -87,7 +88,7 @@ const addNewUser = (newUser) => {
         <input
           type="password"
           id="p-password"
-          placeholder="Enter your password"
+          placeholder="Enter password"
           {...register("password", { required: true })}
         />
       </div>
@@ -100,7 +101,7 @@ const addNewUser = (newUser) => {
         />
       </div>
       <div className="input-container">
-      <button>{selectedUser === null? "Add new user" : "Update user"}</button>
+      <button>{selectedUser === null? "Create" : "Update user"}</button>
       </div>
     </form>
     </div>

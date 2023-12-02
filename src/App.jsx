@@ -22,7 +22,7 @@ function App() {
 
   const getAllUsers = () => {
     axios
-      .get("https://backend-userscrud.onrender.com/users/")
+      .get("https://crudbackend-dev-cgeg.3.us-1.fl0.io/users")
       .then((resp) => setUserList(resp.data))
       .catch(() => setIsError(true));
   };
@@ -33,7 +33,7 @@ function App() {
 
   const addUser = (newUser) => {
     axios
-      .post("https://backend-userscrud.onrender.com/users/", newUser)
+      .post("https://crudbackend-dev-cgeg.3.us-1.fl0.io/users", newUser)
       .then(() => {getAllUsers(),
       setSelectedUser(undefined)})
       .catch(() => {setIsError(true), setIsCreated(false)});
@@ -41,7 +41,7 @@ function App() {
 
   const deleteUser = (id) => {
     axios
-      .delete(`https://backend-userscrud.onrender.com/users/${id}/`)
+      .delete(`https://crudbackend-dev-cgeg.3.us-1.fl0.io/users/${id}/`)
       .then(() => getAllUsers())
       .catch(() => {setIsError(true), setIsDelete(false)} );
   };
@@ -52,7 +52,7 @@ function App() {
 
   const editUser = user => {
     axios
-    .put(`https://backend-userscrud.onrender.com/users/${user.id}/`, user)
+    .put(`https://crudbackend-dev-cgeg.3.us-1.fl0.io/users/${user.id}/`, user)
     .then(() => getAllUsers())
     .catch(() => {setIsSuccesful(false), setIsError(true), setIsVisible(true),  setSelectedUser(user)})
   }
@@ -105,3 +105,4 @@ function App() {
 }
 
 export default App;
+
